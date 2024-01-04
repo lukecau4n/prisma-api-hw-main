@@ -10,7 +10,7 @@ app.use(express.json())
 
 // Todos os produtos
 
-app.get('/produtos', async (req,res) => {
+app.get('/produtos', async (req, res) => {
     const products = await prisma.produto.findMany()
     res.json({
         sucess: true,
